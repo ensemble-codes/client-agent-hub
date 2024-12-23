@@ -240,7 +240,7 @@ export class ClientBase extends EventEmitter {
         }
 
         await this.loadLatestCheckedTweetId();
-        await this.populateTimeline();
+        // await this.populateTimeline();
     }
 
     async fetchOwnPosts(count: number): Promise<Tweet[]> {
@@ -520,7 +520,7 @@ export class ClientBase extends EventEmitter {
 
         // Combine the timeline tweets and mentions/interactions
         const allTweets = [...timeline, ...mentionsAndInteractions.tweets];
-
+        console.log({ allTweets });
         // Create a Set to store unique tweet IDs
         const tweetIdsToCheck = new Set<string>();
         const roomIds = new Set<UUID>();

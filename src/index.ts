@@ -15,7 +15,7 @@ class AgentHubManager {
     }
 }
 
-export const TwitterClientInterface: Client = {
+export const AgentHubClientInterface: Client = {
     async start(runtime: IAgentRuntime) {
         await validateTwitterConfig(runtime);
 
@@ -25,9 +25,9 @@ export const TwitterClientInterface: Client = {
 
         await manager.client.init();
 
-        await manager.post.start();
+        // await manager.post.start();
 
-        await manager.interaction.start();
+        // await manager.interaction.start();
 
         return manager;
     },

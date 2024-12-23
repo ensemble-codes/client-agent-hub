@@ -4,7 +4,7 @@ import { Content, Memory, UUID } from "@ai16z/eliza";
 import { stringToUuid } from "@ai16z/eliza";
 import { ClientBase } from "./base";
 import { elizaLogger } from "@ai16z/eliza";
-import { DEFAULT_MAX_TWEET_LENGTH } from "./environment";
+import { DEFAULT_MAX_TWEET_LENGTH } from "./environment.ts";
 import { Media } from "@ai16z/eliza";
 import fs from "fs";
 import path from "path";
